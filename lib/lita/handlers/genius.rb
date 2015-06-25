@@ -6,7 +6,7 @@ module Lita
 
       config :access_token, type: String, required: true
 
-      route(/^genius\s+(.+)/i, :search, command:true,
+      route(/^!genius\s+(.+)/i, :search, 
             help: {t("help.search_key") => t("help.search_value")})
 
       def search(response)
